@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos y enlaces a hojas de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Carreras y Cursos</title>
+    <meta name="description" content="Descubre y inscríbete en las mejores carreras, cursos y diplomados ofrecidos por nuestra universidad asociada. ¡Empieza tu camino hacia el éxito hoy mismo!">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Carreras y Cursos - Tu Marca y Universidad Asociada">
+    <meta property="og:description" content="Inscríbete en nuestras carreras, cursos y diplomados de alta calidad con la garantía de nuestra universidad asociada.">
+    <meta property="og:image" content="hero-image.jpg">
+    <meta property="og:url" content="https://tusitio.com">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sección de Bienvenida -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="logo-tu-marca.png" alt="Logo de Tu Marca" class="logo">
+            <img src="logo-universidad.png" alt="Logo de la Universidad" class="logo">
+            <h1>Descubre Nuestras Carreras, Cursos y Diplomados</h1>
+            <a href="#programas" class="cta-btn">Explora los Programas</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Programas Destacados -->
+        <section id="programas" class="programs">
+            <h2>Programas Destacados</h2>
+            <div class="program-list">
+                <article class="program">
+                    <img src="curso1.webp" alt="Curso de Marketing Digital" loading="lazy">
+                    <h3>Curso de Marketing Digital</h3>
+                    <p>Aprende las estrategias más avanzadas de marketing digital.</p>
+                    <a href="#" class="cta-btn">Más Información</a>
+                </article>
+                <article class="program">
+                    <img src="curso2.webp" alt="Diplomado en Data Science" loading="lazy">
+                    <h3>Diplomado en Data Science</h3>
+                    <p>Conviértete en un experto en análisis de datos.</p>
+                    <a href="#" class="cta-btn">Más Información</a>
+                </article>
+                <article class="program">
+                    <img src="curso3.webp" alt="Carrera en Ingeniería de Software" loading="lazy">
+                    <h3>Carrera en Ingeniería de Software</h3>
+                    <p>Forma parte de la industria del software con nuestra carrera.</p>
+                    <a href="#" class="cta-btn">Más Información</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios Mejorada -->
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">Lo que Dicen Nuestros Estudiantes</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slide" id="testimonial-slide" aria-live="polite">
+                    <div class="testimonial">
+                        <p>"El curso de Marketing Digital fue una gran experiencia, el contenido fue excelente."</p>
+                        <h4>- Juan Pérez</h4>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Recomiendo el Diplomado en Data Science a cualquiera que quiera adentrarse en el mundo de los datos."</p>
+                        <h4>- María García</h4>
+                    </div>
+                    <div class="testimonial">
+                        <p>"La carrera en Ingeniería de Software me brindó las herramientas necesarias para mi desarrollo profesional."</p>
+                        <h4>- Carlos López</h4>
+                    </div>
+                    <!-- Añade más testimonios aquí -->
+                </div>
+                <!-- Controles del carrusel -->
+                <button class="carousel-btn prev-btn" aria-label="Anterior Testimonio">
+                    &#10094;
+                </button>
+                <button class="carousel-btn next-btn" aria-label="Siguiente Testimonio">
+                    &#10095;
+                </button>
+                <!-- Indicadores del carrusel -->
+                <div class="testimonial-indicators">
+                    <span class="indicator active" data-slide-to="0" aria-label="Ver Testimonio 1"></span>
+                    <span class="indicator" data-slide-to="1" aria-label="Ver Testimonio 2"></span>
+                    <span class="indicator" data-slide-to="2" aria-label="Ver Testimonio 3"></span>
+                    <!-- Añade más indicadores según el número de testimonios -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Contacto Mejorada -->
+        <section class="contact">
+            <h2>Contáctanos</h2>
+            <form action="https://formspree.io/f/tu-id" method="POST">
+                <!-- Tipo de Identificación -->
+                <div class="form-group">
+                    <select id="tipo-id" name="tipo-id" required>
+                        <option value="" disabled selected>Tipo de Identificación</option>
+                        <option value="cedula-ciudadania">Cédula de Ciudadanía</option>
+                        <option value="tarjeta-identidad">Tarjeta de Identidad</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="cedula-extranjeria">Cédula de Extranjería</option>
+                    </select>
+                    <label for="tipo-id" class="visually-hidden">Tipo de Identificación</label>
+                </div>
+
+                <!-- Número de Documento -->
+                <div class="form-group">
+                    <input type="number" id="numero-id" name="numero-id" placeholder="Número de Documento" required>
+                    <label for="numero-id" class="visually-hidden">Número de Documento</label>
+                </div>
+
+                <!-- Nombre -->
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <label for="nombre" class="visually-hidden">Nombre</label>
+                </div>
+
+                <!-- Apellido -->
+                <div class="form-group">
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    <label for="apellido" class="visually-hidden">Apellido</label>
+                </div>
+
+                <!-- Número de Celular -->
+                <div class="form-group">
+                    <input type="tel" id="celular" name="celular" placeholder="Número de Celular" required>
+                    <label for="celular" class="visually-hidden">Número de Celular</label>
+                </div>
+
+                <!-- Selecciona tu Departamento -->
+                <div class="form-group">
+                    <select id="departamento" name="departamento" required>
+                        <option value="" disabled selected>Selecciona tu Departamento</option>
+                        <!-- Lista de departamentos de Colombia -->
+                        <!-- [Agregar los departamentos aquí] -->
+                    </select>
+                    <label for="departamento" class="visually-hidden">Departamento</label>
+                </div>
+
+                <!-- Selecciona el Programa -->
+                <div class="form-group">
+                    <select id="programa" name="programa" required>
+                        <option value="" disabled selected>Selecciona el Programa</option>
+                        <!-- Lista de programas disponibles -->
+                        <!-- [Agregar los programas aquí] -->
+                    </select>
+                    <label for="programa" class="visually-hidden">Programa</label>
+                </div>
+
+                <!-- Nivel de Formación -->
+                <div class="form-group">
+                    <select id="nivel-formacion" name="nivel-formacion" required>
+                        <option value="" disabled selected>Nivel de Formación</option>
+                        <option value="basica-secundaria">Básica Secundaria</option>
+                        <option value="bachiller">Bachiller</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="tecnologo">Tecnólogo</option>
+                        <option value="pregrado">Pregrado</option>
+                        <option value="posgrado">Posgrado</option>
+                        <option value="maestria">Maestría</option>
+                        <option value="especializacion">Especialización</option>
+                        <option value="doctorado">Doctorado</option>
+                    </select>
+                    <label for="nivel-formacion" class="visually-hidden">Nivel de Formación</label>
+                </div>
+
+                <!-- Aceptar Términos y Condiciones -->
+                <div class="form-group terms">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los <a href="#">términos y condiciones</a></label>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" class="cta-btn">Enviar</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lmenntun | CUN</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome (para iconos) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Script para Animaciones de Fade-In -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const options = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <!-- Script para el Carrusel de Testimonios -->
+    <script src="script.js"></script>
+
+</body>
+</html>
